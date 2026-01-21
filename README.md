@@ -104,4 +104,4 @@ CONFLICT_LINE: version from conflict/one
 CONFLICT_LINE: version from conflict/two
 conflict/two
 =======
->>>>>>> parent of 76aa6fe (fix(merge): resolve conflict in README.md)
+>>>>>>> parent of 76aa6fe (fix(merge): resolved conflict in README.md)
