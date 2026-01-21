@@ -104,4 +104,3 @@ CONFLICT_LINE: version from conflict/one
 CONFLICT_LINE: version from conflict/two
 conflict/two
 =======
->>>>>>> parent of b22ba63 (fix(merge): resolve conflict in README.md)
