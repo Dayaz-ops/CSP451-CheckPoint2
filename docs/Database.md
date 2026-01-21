@@ -22,3 +22,5 @@ Example:
 - If `DB_URL` exists, the module performs a **simulated** async connection and logs a masked URL.
 
 This design keeps routes/controllers clean and centralizes connection logic.
+
+test
