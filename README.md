@@ -42,10 +42,50 @@ To intentionally create a merge conflict, edit the same lines in one of:
 npm test
 npm run lint
 ```
-## User Authentication Feature
 
-- Added client-side validation for login inputs
-- Improved accessibility with ARIA live feedback
-- Implemented UI feedback states (error, loading, success)
-- Simulated authentication flow for demonstration purposes
+## Feature: API Endpoints (feature/api-endpoints)
 
+Base path:
+- `/api`
+
+Endpoints:
+- `GET /api/health` → returns `{ status, timestamp }`
+- `GET /api/users` → returns a list of users (stub data)
+- `POST /api/users` → creates a user (simulated)
+
+POST body example:
+```json
+{
+  "name": "Alice",
+  "email": "alice@example.com"
+}
+
+
+
+## Feature: API Endpoints (feature/api-endpoints)
+
+Base path:
+- `/api`
+
+Endpoints:
+- `GET /api/health` → returns `{ status, timestamp }`
+- `GET /api/users` → returns a list of users (stub data)
+- `POST /api/users` → creates a user (simulated)
+
+POST body example:
+```json
+{
+  "name": "Alice",
+  "email": "alice@example.com"
+}
+
+
+Yes — it’s **three backticks**.
+
+### So the final lines you should type while you see `>` are:
+```text
+
+HEAD
+CONFLICT_LINE: version from conflict/one
+CONFLICT_LINE: version from conflict/two
+conflict/two
