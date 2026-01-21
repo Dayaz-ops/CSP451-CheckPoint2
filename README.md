@@ -57,4 +57,4 @@ npm run lint
 - Uses a stub connection for CheckPoint2
 - Added helper function to check database status
 - Implemented using a feature branch workflow
-- >>>>>>> parent of b22ba63 (fix(merge): resolve conflict in README.md)
+
