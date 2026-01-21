@@ -1,3 +1,9 @@
+## Conflict Demo
+
+This line was added in main branch.
+This line was added in feature/merge-conflict branch.
+
+
 # CSP451 Web Starter — Week 2 Checkpoint 2
 
 This repository is a **starter template** for practicing:
@@ -43,28 +49,12 @@ npm test
 npm run lint
 ```
 ## User Authentication Feature
-
-This branch adds client-side validation for the login form.
-
-### Behavior Added
-
-- Prevents empty submissions
-- Validates email format
-- Displays inline error messages
-
-### Affected File(s)
-
-- `public/login.html`
-
-## API Endpoints Feature
-
-This branch adds REST API endpoints for users.
-
-### Behavior Added
-- GET /api/users returns all users
-- GET /api/users/:id returns a user by id
-
-### Affected File(s)
-- `src/routes/api.js`
-- `src/app.js`
-
+- Login route is handled in `src/routes/views.js`
+- Basic validation checks are implemented for email and password
+- This work was completed in the `feature/user-authentication` branch
+## Database Connection Feature
+- Database logic is implemented in `src/db/index.js`
+- Uses a stub connection for CheckPoint2
+- Added helper function to check database status
+- Implemented using a feature branch workflow
+- >>>>>>> parent of b22ba63 (fix(merge): resolve conflict in README.md)
