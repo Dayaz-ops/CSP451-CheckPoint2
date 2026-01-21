@@ -53,5 +53,3 @@ The API endpoints feature introduces a mock API layer that shows
 how user-related endpoints would be structured in a real application.
 The implementation is intentionally simplified to focus on project
 organization and collaborative Git workflows.
-
-

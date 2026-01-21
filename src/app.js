@@ -32,3 +32,12 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
+
+/* === DB startup (feature/database-connection) === */
+try {
+  const { connectDB } = require("./db/connection");
+  // Do not crash if DB_URL missing; runs in mock mode
+  connectDB().catch((e) => console.warn("[db] connect failed:", e.message));
+} catch (e) {
+  console.warn("[db] module not loaded:", e.message);
+}

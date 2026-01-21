@@ -1,0 +1,5 @@
+# Database connection string (example formats)
+# DB_URL=mongodb://user:pass@localhost:27017/mydb
+# DB_URL=postgres://user:pass@localhost:5432/mydb
+
+DB_URL=
