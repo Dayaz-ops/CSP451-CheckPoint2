@@ -1,24 +1,47 @@
-/**
- * Starter login behavior (minimal).
- * Feature branch: feature/user-authentication should add:
- * - better validation (inline errors)
- * - UI feedback states (loading, success, failure)
- * - optional: call an API endpoint (e.g., POST /api/auth/login)
- */
-const form = document.getElementById("loginForm");
-const message = document.getElementById("message");
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+  const emailInput = document.getElementById("email");
+  const passwordInput = document.getElementById("password");
 
-  const email = document.getElementById("email").value.trim();
-  const password = document.getElementById("password").value;
+  const email = emailInput.value.trim();
+  const password = passwordInput.value.trim();
 
-  // Minimal checks (students can improve)
-  if (!email || password.length < 6) {
-    message.textContent = "Please enter a valid email and a password (min 6 characters).";
+  // Reset message before validating
+  message.textContent = "";
+  message.className = "muted";
+
+  // Validate email
+  if (!email) {
+    showError("Email is required.");
     return;
   }
 
-  message.textContent = "Login submitted (stub). Implement authentication in your feature branch.";
+  // Validate password
+  if (password.length < 6) {
+    showError("Password must be at least 6 characters long.");
+    return;
+  }
+
+  // Simulate loading state
+  message.textContent = "Signing in...";
+  message.className = "loading";
+
+  const button = form.querySelector("button");
+  button.disabled = true;
+
+  // Fake delay to simulate authentication
+  setTimeout(() => {
+    button.disabled = false;
+    showSuccess("Login successful (simulated).");
+  }, 1000);
+});
+
+
+// Clear feedback when user starts typing again
+["email", "password"].forEach((id) => {
+  document.getElementById(id).addEventListener("input", () => {
+    message.textContent = "";
+    message.className = "muted";
+  });
 });

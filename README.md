@@ -42,28 +42,50 @@ To intentionally create a merge conflict, edit the same lines in one of:
 npm test
 npm run lint
 ```
-## User Authentication Feature
 
-This branch adds client-side validation for the login form.
+## Feature: API Endpoints (feature/api-endpoints)
 
-### Behavior Added
+Base path:
+- `/api`
 
-- Prevents empty submissions
-- Validates email format
-- Displays inline error messages
+Endpoints:
+- `GET /api/health` → returns `{ status, timestamp }`
+- `GET /api/users` → returns a list of users (stub data)
+- `POST /api/users` → creates a user (simulated)
 
-### Affected File(s)
+POST body example:
+```json
+{
+  "name": "Alice",
+  "email": "alice@example.com"
+}
 
-- `public/login.html`
 
-## API Endpoints Feature
 
-This branch adds REST API endpoints for users.
+## Feature: API Endpoints (feature/api-endpoints)
 
-### Behavior Added
-- GET /api/users returns all users
-- GET /api/users/:id returns a user by id
+Base path:
+- `/api`
 
-### Affected File(s)
-- `src/routes/api.js`
-- `src/app.js`
+Endpoints:
+- `GET /api/health` → returns `{ status, timestamp }`
+- `GET /api/users` → returns a list of users (stub data)
+- `POST /api/users` → creates a user (simulated)
+
+POST body example:
+```json
+{
+  "name": "Alice",
+  "email": "alice@example.com"
+}
+
+
+Yes — it’s **three backticks**.
+
+### So the final lines you should type while you see `>` are:
+```text
+
+HEAD
+CONFLICT_LINE: version from conflict/one
+CONFLICT_LINE: version from conflict/two
+conflict/two
