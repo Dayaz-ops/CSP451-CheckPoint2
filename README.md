@@ -11,19 +11,6 @@ This repository is a **starter template** for practicing:
 ```bash
 npm install
 npm run dev
-# CSP451 Web Starter — Week 2 Checkpoint 2
-
-This repository is a **starter template** for practicing:
-- Git branching strategies (GitHub Flow / Git Flow-lite)
-- Pull Requests + review workflow
-- Intentional merge conflicts + manual resolution
-- Clean history using **Squash and merge**
-
-## Quick Start
-
-```bash
-npm install
-npm run dev
 ```
 
 Open: http://localhost:3000
@@ -55,53 +42,29 @@ To intentionally create a merge conflict, edit the same lines in one of:
 npm test
 npm run lint
 ```
-<<<<<<< HEAD
+## User Authentication Feature
 
-## Feature: API Endpoints (feature/api-endpoints)
+This branch adds client-side validation for the login form.
 
-Base path:
-- `/api`
+### Behavior Added
 
-Endpoints:
-- `GET /api/health` → returns `{ status, timestamp }`
-- `GET /api/users` → returns a list of users (stub data)
-- `POST /api/users` → creates a user (simulated)
+- Prevents empty submissions
+- Validates email format
+- Displays inline error messages
 
-POST body example:
-```json
-{
-  "name": "Alice",
-  "email": "alice@example.com"
-}
+### Affected File(s)
 
+- `public/login.html`
 
+## API Endpoints Feature
 
-## Feature: API Endpoints (feature/api-endpoints)
+This branch adds REST API endpoints for users.
 
-Base path:
-- `/api`
+### Behavior Added
+- GET /api/users returns all users
+- GET /api/users/:id returns a user by id
 
-Endpoints:
-- `GET /api/health` → returns `{ status, timestamp }`
-- `GET /api/users` → returns a list of users (stub data)
-- `POST /api/users` → creates a user (simulated)
-
-POST body example:
-```json
-{
-  "name": "Alice",
-  "email": "alice@example.com"
-}
-
-
-Yes — it’s **three backticks**.
-
-### So the final lines you should type while you see `>` are:
-```text
-
-HEAD
-CONFLICT_LINE: version from conflict/one
-CONFLICT_LINE: version from conflict/two
-conflict/two
-=======
+### Affected File(s)
+- `src/routes/api.js`
+- `src/app.js`
 
