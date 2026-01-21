@@ -11,6 +11,19 @@ This repository is a **starter template** for practicing:
 ```bash
 npm install
 npm run dev
+# CSP451 Web Starter — Week 2 Checkpoint 2
+
+This repository is a **starter template** for practicing:
+- Git branching strategies (GitHub Flow / Git Flow-lite)
+- Pull Requests + review workflow
+- Intentional merge conflicts + manual resolution
+- Clean history using **Squash and merge**
+
+## Quick Start
+
+```bash
+npm install
+npm run dev
 ```
 
 Open: http://localhost:3000
@@ -42,6 +55,7 @@ To intentionally create a merge conflict, edit the same lines in one of:
 npm test
 npm run lint
 ```
+<<<<<<< HEAD
 
 ## Feature: API Endpoints (feature/api-endpoints)
 
@@ -89,3 +103,5 @@ HEAD
 CONFLICT_LINE: version from conflict/one
 CONFLICT_LINE: version from conflict/two
 conflict/two
+=======
+>>>>>>> parent of 76aa6fe (fix(merge): resolve conflict in README.md)
