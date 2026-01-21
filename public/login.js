@@ -1,53 +1,47 @@
-/**
- * Login form behavior
- * This file handles client-side validation and user feedback.
- * Feature branch: feature/user-authentication
- */
-
-const form = document.getElementById("loginForm");
-const message = document.getElementById("message");
-
-// Handle login form submission
 form.addEventListener("submit", (event) => {
-  // Prevent page reload
   event.preventDefault();
 
-  // Get user input values
-  const email = document.getElementById("email").value.trim();
-  const password = document.getElementById("password").value.trim();
+  const emailInput = document.getElementById("email");
+  const passwordInput = document.getElementById("password");
 
-  // Reset message state before validating
+  const email = emailInput.value.trim();
+  const password = passwordInput.value.trim();
+
+  // Reset message before validating
   message.textContent = "";
   message.className = "muted";
 
-  // Validate email field
+  // Validate email
   if (!email) {
     showError("Email is required.");
     return;
   }
 
-  // Validate password length
+  // Validate password
   if (password.length < 6) {
     showError("Password must be at least 6 characters long.");
     return;
   }
 
-  // If all validation passes
-  showSuccess("Login submitted (stub). Authentication will be added later.");
+  // Simulate loading state
+  message.textContent = "Signing in...";
+  message.className = "loading";
+
+  const button = form.querySelector("button");
+  button.disabled = true;
+
+  // Fake delay to simulate authentication
+  setTimeout(() => {
+    button.disabled = false;
+    showSuccess("Login successful (simulated).");
+  }, 1000);
 });
 
-/**
- * Display an error message to the user
- */
-function showError(text) {
-  message.textContent = text;
-  message.className = "error";
-}
 
-/**
- * Display a success message to the user
- */
-function showSuccess(text) {
-  message.textContent = text;
-  message.className = "success";
-}
+// Clear feedback when user starts typing again
+["email", "password"].forEach((id) => {
+  document.getElementById(id).addEventListener("input", () => {
+    message.textContent = "";
+    message.className = "muted";
+  });
+});
