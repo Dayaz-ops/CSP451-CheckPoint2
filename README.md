@@ -42,3 +42,10 @@ To intentionally create a merge conflict, edit the same lines in one of:
 npm test
 npm run lint
 ```
+## User Authentication Feature
+
+- Added client-side validation for login inputs
+- Improved accessibility with ARIA live feedback
+- Implemented UI feedback states (error, loading, success)
+- Simulated authentication flow for demonstration purposes
+
