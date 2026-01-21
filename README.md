@@ -41,29 +41,15 @@ To intentionally create a merge conflict, edit the same lines in one of:
 ```bash
 npm test
 npm run lint
+
 ```
-## User Authentication Feature
+## User Authentication & API Endpoints
 
-This branch adds client-side validation for the login form.
+This section combines updates from multiple feature branches.
+The user authentication feature focuses on client-side validation
+to improve user feedback and prevent invalid input.
 
-### Behavior Added
-
-- Prevents empty submissions
-- Validates email format
-- Displays inline error messages
-
-### Affected File(s)
-
-- `public/login.html`
-
-## API Endpoints Feature
-
-This branch adds REST API endpoints for users.
-
-### Behavior Added
-- GET /api/users returns all users
-- GET /api/users/:id returns a user by id
-
-### Affected File(s)
-- `src/routes/api.js`
-- `src/app.js`
+The API endpoints feature introduces a mock API layer that shows
+how user-related endpoints would be structured in a real application.
+The implementation is intentionally simplified to focus on project
+organization and collaborative Git workflows.
