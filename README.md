@@ -41,15 +41,51 @@ To intentionally create a merge conflict, edit the same lines in one of:
 ```bash
 npm test
 npm run lint
-
 ```
-## User Authentication & API Endpoints
 
-This section combines updates from multiple feature branches.
-The user authentication feature focuses on client-side validation
-to improve user feedback and prevent invalid input.
+## Feature: API Endpoints (feature/api-endpoints)
 
-The API endpoints feature introduces a mock API layer that shows
-how user-related endpoints would be structured in a real application.
-The implementation is intentionally simplified to focus on project
-organization and collaborative Git workflows.
+Base path:
+- `/api`
+
+Endpoints:
+- `GET /api/health` → returns `{ status, timestamp }`
+- `GET /api/users` → returns a list of users (stub data)
+- `POST /api/users` → creates a user (simulated)
+
+POST body example:
+```json
+{
+  "name": "Alice",
+  "email": "alice@example.com"
+}
+
+
+
+## Feature: API Endpoints (feature/api-endpoints)
+
+Base path:
+- `/api`
+
+Endpoints:
+- `GET /api/health` → returns `{ status, timestamp }`
+- `GET /api/users` → returns a list of users (stub data)
+- `POST /api/users` → creates a user (simulated)
+
+POST body example:
+```json
+{
+  "name": "Alice",
+  "email": "alice@example.com"
+}
+
+
+Yes — it’s **three backticks**.
+
+### So the final lines you should type while you see `>` are:
+```text
+
+HEAD
+CONFLICT_LINE: version from conflict/one
+CONFLICT_LINE: version from conflict/two
+conflict/two
