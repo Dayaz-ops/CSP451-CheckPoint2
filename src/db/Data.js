@@ -55,4 +55,3 @@ module.exports = {
   connectDB,
   getDbUrl,
 };
-test.
